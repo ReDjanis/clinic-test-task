@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиника</title>
+    <link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__content container">
+                <div class="header__left">
+                    <div class="burger ">
+                        <input type="checkbox" id="check-menu">
+                        <label for="check-menu" class="burger__label"></label>
+
+                        <div class="burger__line burger__line_position-1"></div>
+                        <div class="burger__line burger__line_position-2"></div>
+                        <div class="burger__line burger__line_position-3"></div>
+                        <div class="burger__line burger__line_position-4"></div>
+                        <div class="burger__content burger__content-close">
+                            <nav class="burger__nav">
+                                <a class="burger__item" href="#about">О клинике</a>
+                                <a class="burger__item" href="#services">Услуги</a>
+                                <a class="burger__item" href="#">Специалисты</a>
+                                <a class="burger__item" href="#">Цены</a>
+                                <a class="burger__item" href="#">Контакты</a>
+                            </nav>
+                            <button class="button-white" data-request>
+                                Записаться на прием
+                            </button>
+                        </div>
+                    </div>
+                    <a class="header__logo" href="#" aria-label="Вернуться в начало страницы">
+                        <svg class="header__logo-svg">
+                            <use href="./images/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <div class="header__location">
+                        <div class="header__location-wrp">
+                            <div class="header__location-icon">
+                                <svg class="header__location-svg">
+                                    <use href="./images/sprite.svg#icon"></use>
+                                </svg>
+                            </div>
+                            <p class="header__location-text">
+                                Ростов-на-Дону
+                            </p>
+                        </div>
+                        <p class="header__location-text header__location-text_gray">
+                            ул. Ленина, 2Б
+                        </p>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <div class="header__contacts">
+                        <a class="header__social" href="" aria-label="Написать в whatsapp">
+                            <svg class="header__social-svg">
+                                <use href="./images/sprite.svg#whatsapp_1"></use>
+                            </svg>
+                        </a>
+                        <div class="header__contacts-info">
+                            <a class="header__contacts-phone" href="tel:88630000000">
+                                +7(863) 000 00 00
+                            </a>
+                            <p class="header__contacts-text">
+                                Ростов-на-Дону
+                            </p>
+                        </div>
+                    </div>
+                    <button class="button" data-request>
+                        Записаться на прием
+                    </button>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <div class="container">
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#about">
+                                    О клинике
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#services">
+                                    Услуги
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Специалисты
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Цены
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <main class="main" id="about">
+                <div class="main__photo">
+                    <picture>
+                        <source srcset="./images/photo-mobile.avif" media="(max-width: 991px)" type="image/avif">
+                        <source srcset="./images/photo-mobile.webp" media="(max-width: 991px)" type="image/webp">
+                        <source srcset="./images/photo-mobile.png" media="(max-width: 991px)">
+                        <source srcset="./images/photo.avif" type="image/avif">
+                        <source srcset="./images/photo.webp" type="image/webp">
+                        <img src="./images/photo.png"
+                            alt="Зона ожидания в клинике: детский уголок, пеленальный столик, телевизор."
+                            loading="lazy">
+                    </picture>
+                </div>
+                <div class="container">
+                    <div class="main__headlines">
+                        <h1 class="main__title">
+                            Многопрофильная клиника для детей
+                            <br>
+                            и взрослых
+                        </h1>
+                        <h2 class="main__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            <br>
+                            incididunt ut labore et dolore magna aliqua
+                        </h2>
+                    </div>
+                </div>
+            </main>
+            <section class="services container" id="services">
+                <div class="slider">
+                    <div class="slider__touch">
+                        <div class="slider__line">
+                            <div class="services__exam">
+                                <div class="services__info">
+                                    <h4 class="services__title">
+                                        Check-up
+                                    </h4>
+                                    <p class="services__subtitle">
+                                        для мужчин
+                                    </p>
+                                    <ul class="services__list">
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Гормональный скрининг
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Свободный тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Глобулин, связывающий половые&nbsp;
+                                                <span class="services__text_indent">
+                                                    гормоны
+                                                </span>
+
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="services__price">
+                                        Всего 2800&#8381;
+                                        <del class="services__price-last">
+                                            3500&#8381;
+                                        </del>
+                                    </div>
+                                    <div class="services__buttons">
+                                        <button class="button" type="submit" data-request>
+                                            Записаться
+                                        </button>
+                                        <button class="button-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="services__image">
+                                    <picture>
+                                        <source srcset="./images/slider-img-1.avif" type="image/avif">
+                                        <source srcset="./images/slider-img-1.webp" type="image/webp">
+                                        <img src="./images/slider-img-1.png"
+                                            alt="Врач за столом ведет запись в блокнот." loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="services__exam">
+                                <div class="services__info">
+                                    <h4 class="services__title">
+                                        Check-up
+                                    </h4>
+                                    <p class="services__subtitle">
+                                        для мужчин
+                                    </p>
+                                    <ul class="services__list">
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Гормональный скрининг
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Свободный тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Глобулин, связывающий половые&nbsp;
+                                                <span class="services__text_indent">
+                                                    гормоны
+                                                </span>
+
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="services__price">
+                                        Всего 2800&#8381;
+                                        <del class="services__price-last">
+                                            3500&#8381;
+                                        </del>
+                                    </div>
+                                    <div class="services__buttons">
+                                        <button class="button" data-request>
+                                            Записаться
+                                        </button>
+                                        <button class="button-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="services__image">
+                                    <picture>
+                                        <source srcset="./images/slider-img-2.avif" type="image/avif">
+                                        <source srcset="./images/slider-img-2.webp" type="image/webp">
+                                        <img src="./images/slider-img-2.png"
+                                            alt="Врач за столом ведет запись в блокнот." loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="services__exam">
+                                <div class="services__info">
+                                    <h4 class="services__title">
+                                        Check-up
+                                    </h4>
+                                    <p class="services__subtitle">
+                                        для мужчин
+                                    </p>
+                                    <ul class="services__list">
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Гормональный скрининг
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Свободный тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Глобулин, связывающий половые&nbsp;
+                                                <span class="services__text_indent">
+                                                    гормоны
+                                                </span>
+
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="services__price">
+                                        Всего 2800&#8381;
+                                        <del class="services__price-last">
+                                            3500&#8381;
+                                        </del>
+                                    </div>
+                                    <div class="services__buttons">
+                                        <button class="button" data-request>
+                                            Записаться
+                                        </button>
+                                        <button class="button-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="services__image">
+                                    <picture>
+                                        <source srcset="./images/slider-img-3.avif" type="image/avif">
+                                        <source srcset="./images/slider-img-3.webp" type="image/webp">
+                                        <img src="./images/slider-img-3.png"
+                                            alt="Врач за столом ведет запись в блокнот." loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="services__exam">
+                                <div class="services__info">
+                                    <h4 class="services__title">
+                                        Check-up
+                                    </h4>
+                                    <p class="services__subtitle">
+                                        для мужчин
+                                    </p>
+                                    <ul class="services__list">
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Гормональный скрининг
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Свободный тестостерон
+                                            </span>
+                                        </li>
+                                        <li class="services__item">
+                                            <span class="services__text">
+                                                Глобулин, связывающий половые&nbsp;
+                                                <span class="services__text_indent">
+                                                    гормоны
+                                                </span>
+
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="services__price">
+                                        Всего 2800&#8381;
+                                        <del class="services__price-last">
+                                            3500&#8381;
+                                        </del>
+                                    </div>
+                                    <div class="services__buttons">
+                                        <button class="button" data-request>
+                                            Записаться
+                                        </button>
+                                        <button class="button-white">
+                                            Подробнее
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="services__image">
+                                    <picture>
+                                        <source srcset="./images/slider-img-4.avif" type="image/avif">
+                                        <source srcset="./images/slider-img-4.webp" type="image/webp">
+                                        <img src="./images/slider-img-4.png"
+                                            alt="Врач за столом ведет запись в блокнот." loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrows">
+                        <button class="slider__btn" id="prevBtn" aria-label="Предыдудщий слайд">
+                            <svg class="slider__svg">
+                                <use href="./images/sprite.svg#left-arrow"></use>
+                            </svg>
+                        </button>
+                        <div class="slider__count">
+                            <span class="slider__count_active" id="currentCard">1</span>
+                            <span class="slider__count_inactive">/</span>
+                            <span class="slider__count_inactive" id="totalCards"></span>
+                        </div>
+                        <button class="slider__btn" id="nextBtn" aria-label="Следующий слайд">
+                            <svg class="slider__svg">
+                                <use href="./images/sprite.svg#right-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="footer__content container">
+                <div class="footer__left">
+                    <a class="footer__logo" href="#" aria-label="Вернуться в начало страницы">
+                        <svg class="footer__logo-svg">
+                            <use href="./images/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <nav class="footer__nav">
+                            <ul class="menu">
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#about">
+                                        О клинике
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#services">
+                                        Услуги
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">
+                                        Специалисты
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">
+                                        Цены
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                    </nav>
+                </div>
+                <div class="footer__social">
+                    <a class="footer__link" href="" aria-label="Перейти в инстаграм">
+                        <picture>
+                            <source srcset="./images/instagram.avif" type="image/avif">
+                            <source srcset="./images/instagram.webp" type="image/webp">
+                            <img class="footer__link-icon" src="./images/instagram.png" alt="instagram">
+                        </picture>
+                    </a>
+                    <a class="footer__link" href="" aria-label="Написать в whatsapp">
+                        <picture>
+                            <source srcset="./images/whatsapp_2.avif" type="image/avif">
+                            <source srcset="./images/whatsapp_2.webp" type="image/webp">
+                            <img class="footer__link-icon" src="./images/whatsapp_2.png" alt="whatsapp">
+                        </picture>
+                    </a>
+                    <a class="footer__link" href="" aria-label="Перейти в telegram">
+                        <picture>
+                            <source srcset="./images/telegram.avif" type="image/avif">
+                            <source srcset="./images/telegram.webp" type="image/webp">
+                            <img class="footer__link-icon" src="./images/telegram.png" alt="telegram">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <dialog class="modal-form">
+            <div class="modal-form__alert">Закрыть</div>
+            <div class="loader">
+                <div class="loader__inner"></div>
+            </div>
+            <form class="form" name="form" action="sendmail.php" method="POST" enctype="multipart/form-data">
+                <div class="form__close">
+                    <button class="form__btn button-white" type="button">
+                        Закрыть
+                    </button>
+                </div>
+                <h2 class="form__title">Отправить заявку</h2>
+
+                <div class="form__content">
+                    <label class="form__item">
+                        <div class="form__name">
+                            Введите имя *
+                        </div>
+                        <input class="form__input" type="text" name="nameUser">
+                    </label>
+
+                    <div class="form__text">
+                        <div class="form__text-empty"></div>
+                        <div class="form__text-message" data-group="nameUser">
+                            обязательно для заполнения
+                        </div>
+                    </div>
+
+                    <label class="form__item">
+                        <div class="form__name">
+                            Введите email *
+                        </div>
+                        <input class="form__input" type="text" name="email">
+                    </label>
+
+                    <div class="form__text">
+                        <div class="form__text-empty"></div>
+                        <div class="form__text-message" data-group="email">
+                            обязательно для заполнения
+                        </div>
+                    </div>
+                    <label class="form__item">
+                        <div class="form__name">
+                            Ваше сообщение *
+                        </div>
+                        <textarea class="form__textarea" name="textMessage" id=""></textarea>
+                    </label>
+
+                    <div class="form__text">
+                        <div class="form__text-empty"></div>
+                        <div class="form__text-message" data-group="textMessage">
+                            обязательно для заполнения
+                        </div>
+                    </div>
+                    <div class="form__item">
+                        <div class="form__text-empty"></div>
+                        <div class="form__current-product"></div>
+                    </div>
+
+                    <div class="form__submit">
+                        <button class="form__submit-btn button" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </dialog>
+
+        <dialog class="modal-message">
+            <p class="modal-message__text">
+                Ваше сообщение отправлено!
+            </p>
+            <button class="modal-message__btn button">
+                Закрыть
+            </button>
+        </dialog>
+     
+    </div>
+
+    <script src="../js/main.min.js"></script>
+</body>
+
+</html>
