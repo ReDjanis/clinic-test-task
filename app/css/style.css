@@ -1,0 +1,296 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url("../fonts/PTSansCaption-Regular.woff2") format("woff2"), url("../fonts/PTSansCaption-Regular.woff") format("woff"), url("../fonts/src/PTSansCaption-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url("../fonts/PTSansCaption-Bold.woff2") format("woff2"), url("../fonts/PTSansCaption-Bold.woff") format("woff"), url("../fonts/src/PTSansCaption-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400;
+  color: #364844;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding-top: 110px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  height: 100%;
+}
+.menu__link {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button {
+  max-width: 196px;
+  width: 100%;
+  padding: 11px 24px 11px 23px;
+  color: #fff;
+  background-color: #0DBC91;
+  border-radius: 50px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.button-white {
+  max-width: 196px;
+  width: 100%;
+  padding: 11px 24px 11px 23px;
+  color: #0DBC91;
+  background-color: transparent;
+  border: 1px solid #0DBC91;
+  border-radius: 50px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+}
+.header__content {
+  width: 100%;
+  height: 67px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20.55px;
+       column-gap: 20.55px;
+}
+.header__logo {
+  width: 92px;
+  height: 28px;
+}
+.header__logo-svg {
+  fill: #0DBC91;
+  width: 100%;
+  height: 100%;
+}
+.header__location-wrp {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+}
+.header__location-icon {
+  width: 20px;
+  height: 20px;
+}
+.header__location-svg {
+  width: 100%;
+  height: 100%;
+  fill: #E1E1E1;
+}
+.header__location-text {
+  font-size: 14px;
+  line-height: 21px;
+}
+.header__location-text_gray {
+  margin-top: -4px;
+  color: #868686;
+  padding-left: 24px;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header__social {
+  margin-right: 10px;
+}
+.header__social-svg {
+  width: 28px;
+  height: 28px;
+}
+.header__phone {
+  margin-right: 35px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+.header__nav {
+  height: 43px;
+  background-color: #1FA181;
+}
+
+.main {
+  width: 100%;
+  height: 533px;
+  background-color: #F8FBFA;
+  position: relative;
+}
+.main__photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 49.48%;
+}
+.main .container {
+  display: flex;
+  align-items: center;
+}
+.main__headlines {
+  max-width: 367px;
+  width: 100%;
+  margin-top: -18px;
+}
+.main__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46.58px;
+  margin-bottom: 14px;
+}
+.main__subtitle {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.services {
+  margin-top: 100px;
+  width: 100%;
+}
+.services__exam {
+  display: flex;
+  justify-content: space-between;
+  max-height: 440px;
+  height: 100%;
+}
+.services__info {
+  max-width: 613px;
+  width: 100%;
+  background-color: #E2F0EF;
+  border-radius: 5px 0 0 5px;
+}
+.services__info:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform-origin: 100% 0;
+  transform: skew(-45deg);
+  z-index: -1;
+}
+.services__image {
+  max-width: 692px;
+  width: 100%;
+  height: 440px;
+  position: relative;
+}
+.services__image img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.services__buttons {
+  display: flex;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+}
+
+.footer {
+  height: 200px;
+  background-color: #b67bd8;
+}/*# sourceMappingURL=style.css.map */

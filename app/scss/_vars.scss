@@ -1,0 +1,72 @@
+@use 'sass:math';
+@mixin fonts($fz, $lh, $fw: 400) {
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+}
+
+@function strip-unit($number) {
+    @if type-of($number)=='number'and not unitless($number) {
+        @return math.div($number, ($number * 0 + 1));
+    }
+
+    @return $number;
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+    $f-min: strip-unit($f-min);
+    $f-max: strip-unit($f-max);
+    $w-min: strip-unit($w-min);
+    $w-max: strip-unit($w-max);
+
+    $k: calc(($f-max - $f-min)/($w-max - $w-min));
+    $b: $f-min - $k * $w-min;
+
+    $b: $b + $units;
+
+    @return calc(#{$k} * 100vw + #{$b});
+}
+
+@function calcFluidLineHeight($lh-min, $lh-max, $w-min, $w-max, $units: px) {
+    $lh-min: strip-unit($lh-min);
+    $lh-max: strip-unit($lh-max);
+    $w-min: strip-unit($w-min);
+    $w-max: strip-unit($w-max);
+
+    $k: calc(($lh-max - $lh-min)/($w-max - $w-min));
+    $b: $lh-min - $k * $w-min;
+
+    $b: $b + $units;
+
+    @return calc(#{$k} * 100vw + #{$b});
+}
+
+@mixin fluidFont($f-min, $f-max, $lh-min, $lh-max, $w-min, $w-max, $fallback: false) {
+
+    font-size: $f-min;
+    line-height: $lh-min;
+
+    @media (min-width: $w-min) {
+        @if ($fallback) {
+            font-size: $fallback;
+        }
+
+        font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max);
+        line-height: calcFluidLineHeight($lh-min, $lh-max, $w-min, $w-max);
+    }
+
+    @media (min-width: $w-max) {
+        font-size: $f-max;
+        line-height: $lh-max;
+    }
+}
+
+@function calcFluidParam($var-min, $var-max, $w-min, $w-max) {
+    $var-min-unit: $var-min;
+    $var-min-no-unit: strip-unit($var-min);
+
+    $w-min-unit: $w-min;
+    $w-min-no-unit: strip-unit($w-min);
+
+    @return calc($var-min-unit + ($var-max - $var-min-no-unit) * ((100vw - $w-min-unit) / ($w-max - $w-min-no-unit)));
+}

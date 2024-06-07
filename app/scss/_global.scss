@@ -1,0 +1,121 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    color: #364844;
+}
+
+.scroll-lock {
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1175px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 17px 0 18px;
+}
+
+.content {
+    flex: 1 0 auto;
+    width: 100%;
+    margin-top: 65px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 30px;
+    row-gap: 15px;
+    height: 100%;
+
+    &__link {
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        text-decoration: none;
+        transition: opacity 0.3s linear;
+
+        &:hover, &:active {
+            opacity: 0.7;
+        }
+    }
+}
+
+.button {
+    max-width: calc(137px + (196 - 137) * ((100vw - 375px) / (992 - 375)));
+    width: 100%;
+    height: 43px;
+    padding: 11px 23px;
+    color: #fff;
+    background-color: #0DBC91;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 21px;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+
+.button:hover,
+.button:active {
+    background-color: #00D29F;
+}
+
+.button-white {
+    max-width: calc(137px + (196 - 137) * ((100vw - 375px) / (992 - 375)));
+    width: 100%;
+    height: 43px;
+    padding: 11px 23px;
+    color: #0DBC91;
+    background-color: transparent;
+    border: 1px solid #0DBC91;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 21px;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+
+.button-white:hover,
+.button-white:active {
+    background-color: #0DBC91;
+    color: #fff;
+}
+
+.freehosting-2domains-link {
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        margin-top: 110px;
+    }
+
+    .menu {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .button,
+    .button-white {
+        max-width: 196px;
+    }
+}
